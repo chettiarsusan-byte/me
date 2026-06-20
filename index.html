@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Support My Work</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; background: #f4f4f9; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        button { background: #528FF0; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Support My Creative Project</h1>
+    <p>Every contribution helps me keep creating!</p>
+    <button id="rzp-button1">Donate Now</button>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    document.getElementById('rzp-button1').onclick = function(e) {
+        // You would typically call your backend API here to create an Order ID
+        // For now, this demonstrates the trigger for the UI
+        alert("Integrate your backend to generate an Order ID from Razorpay!");
+    }
+</script>
+</body>
+</html>
