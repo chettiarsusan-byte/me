@@ -3,54 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, friend.</title>
+    <title>A space for my words</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300&display=swap');
-        
-        body { 
-            background: #fdfaf6; 
-            color: #5a5a5a; 
-            font-family: 'Montserrat', sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@200;300;400&display=swap');
+
+        body {
+            background-color: #fcfaf7; /* A soft, warm paper tone */
+            background-image: radial-gradient(#e8e3dc 0.5px, transparent 0.5px);
+            background-size: 20px 20px; /* Subtle paper texture */
+            color: #5a5a5a;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
         }
-        .card { 
-            text-align: center; 
-            padding: 3rem; 
-            max-width: 400px; 
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        .card {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 450px;
         }
-        h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-style: italic; 
-            color: #8e7d77; 
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.2rem;
+            color: #7a6c67;
             margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
-        p { 
-            line-height: 1.8; 
-            margin-bottom: 2.5rem; 
-            font-size: 1rem;
-            color: #7a7a7a;
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: #887a75;
+            font-weight: 300;
         }
-        .support-btn { 
-            background: #e8dcd6; 
-            border: none; 
-            padding: 14px 30px; 
-            border-radius: 25px; 
-            cursor: pointer; 
-            color: #6b5e59; 
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: 0.4s;
+
+        .engage-link {
+            background: #fff;
+            border: 1px solid #dcd0ca;
+            padding: 15px 40px;
+            border-radius: 50px;
+            color: #6b5e59;
+            font-size: 0.85rem;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
-        .support-btn:hover { 
-            background: #dcd0ca; 
-            transform: translateY(-2px); 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+        .engage-link:hover {
+            background: #e8dcd6;
+            border-color: #e8dcd6;
+            color: #4a423f;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
     </style>
 </head>
@@ -58,10 +75,11 @@
 
 <div class="card">
     <h1>Hello, friend.</h1>
-    <p>I was waiting for you for a long time; finally, now here you are.</p>
-    <button class="support-btn" id="rzp-button1">Engage with me</button>
+    <p>I was waiting for you for a long time.<br>Finally, now here you are.</p>
+    
+    <!-- Once approved, put your Razorpay URL here -->
+    <a href="#" class="engage-link">Engage with me</a>
 </div>
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </body>
 </html>
