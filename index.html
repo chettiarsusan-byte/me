@@ -57,27 +57,27 @@
             font-weight: 300;
         }
 
-        .engage-link {
-            background: #fff;
-            border: 1px solid #dcd0ca;
-            padding: 15px 40px;
-            border-radius: 50px;
-            color: #6b5e59;
-            font-size: 0.85rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        /* Styling the Razorpay button to match your vibe */
+        .razorpay-payment-button {
+            background: #fff !important;
+            border: 1px solid #dcd0ca !important;
+            padding: 15px 40px !important;
+            border-radius: 50px !important;
+            color: #6b5e59 !important;
+            font-size: 0.85rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            cursor: pointer !important;
+            transition: all 0.4s ease !important;
+            font-family: 'Montserrat', sans-serif !important;
         }
 
-        .engage-link:hover {
-            background: #e8dcd6;
-            border-color: #e8dcd6;
-            color: #4a423f;
+        .razorpay-payment-button:hover {
+            background: #e8dcd6 !important;
+            border-color: #e8dcd6 !important;
+            color: #4a423f !important;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
         }
     </style>
 </head>
@@ -89,8 +89,14 @@
     
     <p>I was waiting for you for a long time.<br>Finally, now here you are.</p>
     
-    <!-- Place your Razorpay Payment Page URL below -->
-    <a href="#" class="engage-link">Engage with me</a>
+    <!-- Razorpay Payment Button -->
+    <form>
+        <script 
+            src="https://checkout.razorpay.com/v1/payment-button.js" 
+            data-payment_button_id="pl_T4MgJOh1aexGZa" 
+            async>
+        </script>
+    </form>
 </div>
 
 </body>
